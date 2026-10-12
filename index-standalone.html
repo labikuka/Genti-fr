@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GENTI - Expert en rénovation intérieure complète en France. Peinture, finitions, aménagement et revêtements intérieurs. Devis gratuit en 24h." />
+  <title>GENTI - Rénovation Intérieure Complète</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .btn-primary {
+      @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+    }
+    .btn-secondary {
+      @apply bg-white hover:bg-gray-50 text-primary-600 border-2 border-primary-600 font-semibold px-6 py-3 rounded-lg transition-colors duration-200;
+    }
+    .section-title {
+      @apply text-3xl md:text-4xl font-bold text-gray-900 mb-4;
+    }
+    .section-subtitle {
+      @apply text-lg text-gray-600 mb-12 max-w-3xl mx-auto;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  
+  <!-- Header -->
+  <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex-shrink-0">
+          <a href="#" class="flex items-center">
+            <span class="text-3xl font-bold text-primary-600">GENTI</span>
+            <span class="ml-2 text-sm text-gray-600 hidden sm:block">Rénovation Intérieure</span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#hero" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Accueil</a>
+          <a href="#services" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Nos Services</a>
+          <a href="#before-after" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Nos Réalisations</a>
+          <a href="#why-us" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">À propos</a>
+          <a href="#quote-form" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
+          <a href="#quote-form" class="btn-primary">Demander un Devis Gratuit</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-primary-600">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <a href="#hero" class="block py-3 text-gray-700 hover:text-primary-600 font-medium">Accueil</a>
+        <a href="#services" class="block py-3 text-gray-700 hover:text-primary-600 font-medium">Nos Services</a>
+        <a href="#before-after" class="block py-3 text-gray-700 hover:text-primary-600 font-medium">Nos Réalisations</a>
+        <a href="#why-us" class="block py-3 text-gray-700 hover:text-primary-600 font-medium">À propos</a>
+        <a href="#quote-form" class="block py-3 text-gray-700 hover:text-primary-600 font-medium">Contact</a>
+        <a href="#quote-form" class="block mt-4 btn-primary text-center">Demander un Devis Gratuit</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="pt-20 relative bg-gradient-to-br from-primary-50 to-white">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80" alt="Rénovation intérieure" class="w-full h-full object-cover" />
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Transformez Votre Intérieur avec <span class="text-primary-600">Excellence et Précision</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+          Expert en rénovation intérieure complète : peinture de finition pour portes et rampes d'escalier, rénovation complète de vos espaces de vie.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#quote-form" class="btn-primary text-lg flex items-center justify-center gap-2 w-full sm:w-auto">
+            Obtenir mon devis gratuit en 24h
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="tel:+33123456789" class="btn-secondary text-lg flex items-center justify-center gap-2 w-full sm:w-auto">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            Appelez-nous
+          </a>
+        </div>
+        <div class="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span>Devis gratuit sous 24h</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+            <span>Travaux strictement intérieurs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <svg viewBox="0 0 1440 120" fill="none" class="w-full"><path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/></svg>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="section-title">Pourquoi Choisir GENTI ?</h2>
+        <p class="section-subtitle">L'excellence au service de votre intérieur. Découvrez ce qui nous distingue dans le domaine de la rénovation intérieure.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+          <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Artisanat Premium</h3>
+          <p class="text-gray-600 leading-relaxed">Un savoir-faire d'excellence pour des finitions impeccables et durables dans chaque détail de votre intérieur.</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+          <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Travail Soigné et Propre</h3>
+          <p class="text-gray-600 leading-relaxed">Nous respectons votre habitat : chantier propre, protection des surfaces et nettoyage méticuleux après intervention.</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+          <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Respect des Délais</h3>
+          <p class="text-gray-600 leading-relaxed">Engagement ferme sur les échéances. Votre projet est livré dans les temps, sans surprise ni retard.</p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100">
+          <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Tarification Transparente</h3>
+          <p class="text-gray-600 leading-relaxed">Devis détaillé et honnête sans frais cachés. Vous savez exactement ce que vous payez, dès le début.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="section-title">Nos Services d'Intérieur</h2>
+        <p class="section-subtitle">Des solutions complètes pour transformer et embellir vos espaces intérieurs avec un savoir-faire artisanal d'exception.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-8">
+            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Rénovation Intérieure Complète</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Transformation complète de vos espaces intérieurs : murs, sols, plafonds, et agencement.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Réaménagement d'espaces</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Réparation et préparation des murs</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Installation de revêtements de sol</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Rénovation de plafonds</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-8">
+            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Peinture & Finitions de Précision</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Expertise en peinture de finition pour les éléments délicats de votre intérieur.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Peinture de portes et huisseries</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Finition des rampes d'escalier</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Peinture de cadres de fenêtres</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Restauration de garde-corps</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="p-8">
+            <div class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
+              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Aménagement & Revêtements</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">Préparation et mise en œuvre de tous types de revêtements intérieurs.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Préparation des surfaces</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Pose de carrelage intérieur</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Travaux de plâtrerie intérieure</li>
+              <li class="flex items-start gap-2 text-sm text-gray-600"><span class="text-primary-600">✓</span>Maçonnerie de finition</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Gallery -->
+  <section id="before-after" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="section-title">Nos Réalisations</h2>
+        <p class="section-subtitle">Découvrez la transformation de nos projets de rénovation intérieure. Avant et après, le résultat parle de lui-même.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="grid grid-cols-2">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=400&q=80" alt="Avant" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">Avant</span>
+            </div>
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=400&q=80" alt="Après" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 right-3 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">Après</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Rénovation de Porte</h3>
+            <p class="text-gray-600 text-sm">Restauration complète d'une porte intérieure avec peinture de finition haute qualité</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="grid grid-cols-2">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400&q=80" alt="Avant" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">Avant</span>
+            </div>
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&q=80" alt="Après" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 right-3 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">Après</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Rampes d'Escalier</h3>
+            <p class="text-gray-600 text-sm">Finition et peinture de rampes d'escalier pour un aspect moderne et élégant</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="grid grid-cols-2">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80" alt="Avant" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">Avant</span>
+            </div>
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80" alt="Après" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 right-3 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">Après</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Transformation de Pièce</h3>
+            <p class="text-gray-600 text-sm">Rénovation complète d'un salon : murs, sols et agencement</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="grid grid-cols-2">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=400&q=80" alt="Avant" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">Avant</span>
+            </div>
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&q=80" alt="Après" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 right-3 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">Après</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Peinture de Huisseries</h3>
+            <p class="text-gray-600 text-sm">Peinture précise des cadres de fenêtres et huisseries pour un fini impeccable</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="grid grid-cols-2">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=400&q=80" alt="Avant" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">Avant</span>
+            </div>
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&q=80" alt="Après" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 right-3 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">Après</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Balustrade Restaurée</h3>
+            <p class="text-gray-600 text-sm">Restauration et finition d'une balustrade intérieure en bois</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-100">
+          <div class="grid grid-cols-2">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&q=80" alt="Avant" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-medium">Avant</span>
+            </div>
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80" alt="Après" class="aspect-square w-full object-cover" />
+              <span class="absolute bottom-3 right-3 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">Après</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Rénovation de Cuisine</h3>
+            <p class="text-gray-600 text-sm">Transformation complète d'une cuisine avec revêtements et peinture</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <p class="text-gray-500 mb-4">Ces images sont des illustrations. Contactez-nous pour voir nos réalisations réelles.</p>
+        <a href="#quote-form" class="btn-primary inline-block">Voir Votre Projet Transformé</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form -->
+  <section id="quote-form" class="py-20 bg-gradient-to-br from-primary-50 to-primary-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="section-title">Demande de Devis en Ligne</h2>
+        <p class="section-subtitle">Obtenez votre devis gratuit en 24h. Remplissez le formulaire ci-dessous et notre équipe vous recontactera rapidement.</p>
+      </div>
+      <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <form id="quote-form-element" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Nom complet *</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors" placeholder="Votre nom" />
+            </div>
+            <div>
+              <label for="contact" class="block text-sm font-semibold text-gray-700 mb-2">Téléphone ou Email *</label>
+              <input type="text" id="contact" name="contact" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors" placeholder="06 12 34 56 78 ou email@exemple.com" />
+            </div>
+            <div>
+              <label for="location" class="block text-sm font-semibold text-gray-700 mb-2">Ville en France *</label>
+              <input type="text" id="location" name="location" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors" placeholder="Paris, Lyon, Marseille..." />
+            </div>
+            <div>
+              <label for="projectType" class="block text-sm font-semibold text-gray-700 mb-2">Type de projet intérieur *</label>
+              <select id="projectType" name="projectType" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors bg-white">
+                <option value="">Sélectionnez un type de projet</option>
+                <option value="peinture-portes">Peinture de portes et huisseries</option>
+                <option value="rampes-escalier">Finition de rampes d'escalier</option>
+                <option value="renovation-complete">Rénovation intérieure complète</option>
+                <option value="revetements">Pose de revêtements intérieurs</option>
+                <option value="autre">Autre projet intérieur</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full btn-primary text-lg py-4">Obtenir mon devis gratuit en 24h</button>
+            <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-500 pt-4">
+              <div class="flex items-center gap-2"><span class="text-green-500">✓</span><span>Sans engagement</span></div>
+              <div class="flex items-center gap-2"><span class="text-green-500">✓</span><span>Réponse sous 24h</span></div>
+              <div class="flex items-center gap-2"><span class="text-green-500">✓</span><span>Devis gratuit</span></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">GENTI</h3>
+          <p class="text-gray-400 mb-4">Expert en rénovation intérieure complète en France. Peinture, finitions et aménagement d'espaces avec un savoir-faire artisanal d'exception.</p>
+          <div class="flex items-center gap-2 text-sm text-gray-400">
+            <span class="text-primary-400">⚠️</span>
+            <span>Travaux strictement intérieurs</span>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              <div><p class="text-gray-400 text-sm">Téléphone</p><p class="font-medium">01 23 45 67 89</p></div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-primary-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <div><p class="text-gray-400 text-sm">Email</p><p class="font-medium">contact@genti-renovation.fr</p></div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Nos Services</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li class="hover:text-white transition-colors cursor-pointer">Rénovation intérieure complète</li>
+            <li class="hover:text-white transition-colors cursor-pointer">Peinture de finition</li>
+            <li class="hover:text-white transition-colors cursor-pointer">Portes et huisseries</li>
+            <li class="hover:text-white transition-colors cursor-pointer">Rampes d'escalier</li>
+            <li class="hover:text-white transition-colors cursor-pointer">Revêtements intérieurs</li>
+            <li class="hover:text-white transition-colors cursor-pointer">Plâtrerie intérieure</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-400 text-sm">© 2024 GENTI - Rénovation Intérieure. Tous droits réservés.</p>
+        <div class="flex gap-6 text-sm text-gray-400">
+          <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+          <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+          <a href="#" class="hover:text-white transition-colors">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+
+    // Form submission
+    document.getElementById('quote-form-element').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Merci pour votre demande ! Nous vous contacterons dans les 24h.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
